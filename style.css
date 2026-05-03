@@ -231,114 +231,66 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
 /* BOTÓN WHATSAPP FLOTANTE */
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 2px 2px 20px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s ease; }
 .whatsapp-float:hover { transform: scale(1.15); }
-/* AJUSTES PARA CELULAR (PANTALLAS PEQUEÑAS) */
-@media (max-width: 768px) {
-    /* Ajustamos el tamaño de los títulos principales */
-    h1 { font-size: 1.8rem !important; }
-    h2 { font-size: 1.5rem !important; }
-
-    /* La sección de infraestructura (donde sale el video) */
-    .infrastructure {
-        flex-direction: column; /* Pone el texto arriba y el video abajo */
-        padding: 50px 5%;
-        text-align: center;
-    }
-
-    /* Ajustamos los contenedores de los volantes bimasas */
-    .products-grid, .volantes-container {
-        display: grid;
-        grid-template-columns: 1fr; /* Un solo volante por fila para que no se amontonen */
-        gap: 20px;
-        padding: 10px;
-    }
-
-    .volante-card {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* El video debe ocupar todo el ancho */
-    .video-container video {
-        width: 100%;
-        height: auto;
-    }
-
-    /* El menú de navegación (si tienes uno) */
-    nav {
-        padding: 15px;
-    }
-}
 /* =========================================
-   BLOQUEAR SCROLL HACIA LOS LADOS
+   AJUSTES DEFINITIVOS PARA CELULAR
    ========================================= */
 html, body {
     overflow-x: hidden;
     max-width: 100vw;
 }
 
-/* =========================================
-ARREGLO DEL MENÚ Y WHATSAPP EN CELULAR
-   ========================================= */
 @media (max-width: 768px) {
-    /* Apilamos el encabezado: Logo arriba, enlaces abajo */
-    header, .navbar, nav {
+    /* Ajustes de textos y video */
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    .infrastructure { flex-direction: column; padding: 50px 5%; text-align: center; }
+    .infra-image video { width: 100%; height: auto; }
+    
+    /* EL ENCABEZADO Y LOS BOTONES (La solución real) */
+    header {
+        display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
-        padding: 15px !important;
-        gap: 15px !important;
-    }
-
-    /* Centramos los enlaces (Servicios, Volantes, Nosotros) */
-    nav ul, .menu-links {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Centramos los íconos de Facebook, TikTok y el botón Contacto */
-    .redes-sociales, .social-icons, .nav-buttons {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 15px !important;
-        width: 100% !important;
-        margin-top: 10px !important;
-    }
-
-    /* Arreglo del botón flotante de WhatsApp para que no se pierda */
-    .whatsapp-flotante, .btn-wsp, .whatsapp-btn, a[href*="whatsapp"] {
-        position: fixed !important;
-        right: 20px !important;
-        bottom: 20px !important;
-        z-index: 10000 !important;
-    }
-}
-/* =========================================
-   ARREGLO DEFINITIVO DEL ENCABEZADO MÓVIL
-   ========================================= */
-@media (max-width: 768px) {
-    /* 1. Le quitamos la altura fija al cajón azul para que se estire */
-    header, .navbar, .header-container {
         height: auto !important;
-        min-height: auto !important;
-        padding: 20px 10px !important;
+        padding: 25px 5% !important;
+        background-color: rgba(11, 29, 58, 0.98) !important; /* Fondo oscuro para que resalte */
     }
 
-    /* 2. Ponemos los enlaces de texto uno debajo del otro bien organizados */
-    nav ul, .menu-links {
+    nav {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 15px !important;
-        margin: 20px 0 !important;
+        width: 100% !important;
+        margin-top: 20px !important;
     }
 
-    /* 3. Aseguramos que los botones de redes y contacto tengan su propio espacio abajo */
-    .redes-sociales, .nav-buttons, .social-icons {
-        margin-top: 15px !important;
+    /* Centramos los enlaces y les quitamos el margen invisible */
+    nav a {
+        margin-left: 0 !important;
+        margin-bottom: 20px !important;
+        font-size: 1.2rem !important;
+        display: block !important;
+    }
+
+    /* Los íconos de redes (Facebook, TikTok) alineados en fila */
+    .social-icon {
+        display: inline-block !important;
+        margin: 0 15px 20px 15px !important;
+        font-size: 1.5rem !important;
+    }
+
+    /* El botón de Contacto centrado */
+    .btn-menu {
+        margin-left: 0 !important;
+        width: 80% !important;
+        text-align: center !important;
         margin-bottom: 10px !important;
+    }
+
+    /* WhatsApp flotante asegurado */
+    .whatsapp-float {
+        bottom: 20px !important;
+        right: 20px !important;
+        z-index: 10000 !important;
+        transform: scale(0.85) !important; /* Un poco más pequeño para no estorbar en el cel */
     }
 }
