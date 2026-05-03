@@ -277,7 +277,7 @@ html, body {
 }
 
 /* =========================================
-   ARREGLO DEL MENÚ Y WHATSAPP EN CELULAR
+ARREGLO DEL MENÚ Y WHATSAPP EN CELULAR
    ========================================= */
 @media (max-width: 768px) {
     /* Apilamos el encabezado: Logo arriba, enlaces abajo */
@@ -315,5 +315,30 @@ html, body {
         right: 20px !important;
         bottom: 20px !important;
         z-index: 10000 !important;
+    }
+}
+/* =========================================
+   ARREGLO DEFINITIVO DEL ENCABEZADO MÓVIL
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Le quitamos la altura fija al cajón azul para que se estire */
+    header, .navbar, .header-container {
+        height: auto !important;
+        min-height: auto !important;
+        padding: 20px 10px !important;
+    }
+
+    /* 2. Ponemos los enlaces de texto uno debajo del otro bien organizados */
+    nav ul, .menu-links {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin: 20px 0 !important;
+    }
+
+    /* 3. Aseguramos que los botones de redes y contacto tengan su propio espacio abajo */
+    .redes-sociales, .nav-buttons, .social-icons {
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
     }
 }
