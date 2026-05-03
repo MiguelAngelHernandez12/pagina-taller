@@ -232,7 +232,7 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 2px 2px 20px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s ease; }
 .whatsapp-float:hover { transform: scale(1.15); }
 /* =========================================
-   AJUSTES DEFINITIVOS PARA CELULAR
+nAJUSTES DEFINITIVOS PARA CELULAR
    ========================================= */
 html, body {
     overflow-x: hidden;
@@ -246,13 +246,14 @@ html, body {
     .infrastructure { flex-direction: column; padding: 50px 5%; text-align: center; }
     .infra-image video { width: 100%; height: auto; }
     
-    /* EL ENCABEZADO Y LOS BOTONES (La solución real) */
+/* EL ENCABEZADO Y LOS BOTONES (La solución real) */
     header {
+        position: relative !important; /* <--- ¡ESTA ES LA MAGIA QUE EMPUJA EL TEXTO HACIA ABAJO! */
         display: flex !important;
         flex-direction: column !important;
         height: auto !important;
         padding: 25px 5% !important;
-        background-color: rgba(11, 29, 58, 0.98) !important; /* Fondo oscuro para que resalte */
+        background-color: rgba(11, 29, 58, 0.98) !important;
     }
 
     nav {
