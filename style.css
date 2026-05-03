@@ -231,3 +231,40 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
 /* BOTÓN WHATSAPP FLOTANTE */
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 2px 2px 20px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s ease; }
 .whatsapp-float:hover { transform: scale(1.15); }
+/* AJUSTES PARA CELULAR (PANTALLAS PEQUEÑAS) */
+@media (max-width: 768px) {
+    /* Ajustamos el tamaño de los títulos principales */
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+
+    /* La sección de infraestructura (donde sale el video) */
+    .infrastructure {
+        flex-direction: column; /* Pone el texto arriba y el video abajo */
+        padding: 50px 5%;
+        text-align: center;
+    }
+
+    /* Ajustamos los contenedores de los volantes bimasas */
+    .products-grid, .volantes-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Un solo volante por fila para que no se amontonen */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .volante-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* El video debe ocupar todo el ancho */
+    .video-container video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* El menú de navegación (si tienes uno) */
+    nav {
+        padding: 15px;
+    }
+}
