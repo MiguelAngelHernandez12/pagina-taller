@@ -268,3 +268,52 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
         padding: 15px;
     }
 }
+/* =========================================
+   BLOQUEAR SCROLL HACIA LOS LADOS
+   ========================================= */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* =========================================
+   ARREGLO DEL MENÚ Y WHATSAPP EN CELULAR
+   ========================================= */
+@media (max-width: 768px) {
+    /* Apilamos el encabezado: Logo arriba, enlaces abajo */
+    header, .navbar, nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px !important;
+        gap: 15px !important;
+    }
+
+    /* Centramos los enlaces (Servicios, Volantes, Nosotros) */
+    nav ul, .menu-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Centramos los íconos de Facebook, TikTok y el botón Contacto */
+    .redes-sociales, .social-icons, .nav-buttons {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    /* Arreglo del botón flotante de WhatsApp para que no se pierda */
+    .whatsapp-flotante, .btn-wsp, .whatsapp-btn, a[href*="whatsapp"] {
+        position: fixed !important;
+        right: 20px !important;
+        bottom: 20px !important;
+        z-index: 10000 !important;
+    }
+}
