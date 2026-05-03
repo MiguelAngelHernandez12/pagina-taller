@@ -1,0 +1,233 @@
+/* RESET MODERNO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #0b1d3a;
+    overflow-x: hidden; 
+}
+
+/* ENCABEZADO FLOTANTE TRANSPARENTE */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 8%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo { display: flex; align-items: center; gap: 15px; }
+.logo img { max-height: 60px; width: auto; filter: brightness(0) invert(1); }
+.logo-info { display: flex; flex-direction: column; line-height: 1; }
+.logo-info h2 { color: white; font-weight: 900; font-size: 1.5rem; letter-spacing: 1px; margin: 0; }
+.logo-info span { color: #007bff; }
+.logo-info p { color: #cccccc; font-size: 0.7rem; font-weight: 700; letter-spacing: 3.5px; margin-top: 5px; text-transform: uppercase; }
+
+nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: 700; font-size: 1rem; transition: color 0.3s ease; }
+nav a:hover { color: #007bff; }
+
+.btn-menu { border: 2px solid #007bff; padding: 10px 24px; border-radius: 5px; transition: all 0.3s ease; }
+.btn-menu:hover { background-color: #007bff; color: white; box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); }
+
+/* SECCIÓN HERO CON PARALLAX */
+.hero {
+    height: 100vh; 
+    background: linear-gradient(rgba(11, 29, 58, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1610491462702-42e6ecd6a124?q=80&w=1920&auto=format&fit=crop') center/cover;
+    background-attachment: fixed; 
+    display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px;
+}
+
+.hero-content h1 { color: white; font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; text-transform: uppercase; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); }
+.hero-content p { color: #cccccc; font-size: 1.3rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+.btn-whatsapp {
+    background-color: #007bff; color: white; text-decoration: none; padding: 18px 40px;
+    font-size: 1.2rem; font-weight: bold; border-radius: 50px; display: inline-block;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4); transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-whatsapp:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.5); }
+
+/* SECCIÓN SERVICIOS */
+.services { padding: 100px 8%; background-color: #0b1d3a; text-align: center; }
+.section-title { color: white; font-size: 3rem; font-weight: 900; margin-bottom: 10px; text-transform: uppercase; }
+.section-subtitle { color: #007bff; font-size: 1.1rem; font-weight: 700; margin-bottom: 60px; letter-spacing: 1px; }
+
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card {
+    background: rgba(255, 255, 255, 0.03); padding: 50px 30px; border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover { background: rgba(0, 123, 255, 0.05); transform: translateY(-15px); border-color: #007bff; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 123, 255, 0.4) inset, 0 0 15px rgba(0, 123, 255, 0.6); }
+.card-icon { font-size: 3rem; margin-bottom: 25px; display: block; color: white; transition: all 0.4s ease; }
+.card:hover .card-icon { color: #007bff; text-shadow: 0 0 15px rgba(0, 123, 255, 0.8); transform: scale(1.1); }
+.card h3 { color: white; font-size: 1.6rem; margin-bottom: 15px; font-weight: 700; }
+.card p { color: #aaaaaa; line-height: 1.7; font-size: 1rem; }
+
+/* SECCIÓN DE MARCAS */
+.brands { padding: 50px 8%; background-color: #08162b; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; }
+.brands h3 { color: #555; font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 40px; }
+.brands-list { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; align-items: center; }
+.brands-list span { color: white; font-weight: 900; font-size: 1.5rem; opacity: 0.3; filter: grayscale(1); transition: all 0.3s; }
+.brands-list span:hover { opacity: 1; color: #007bff; text-shadow: 0 0 10px rgba(0, 123, 255, 0.5); }
+
+/* =========================================
+CATÁLOGO SUPER PREMIUM (E-COMMERCE 3D)
+   ========================================= */
+.catalog-section { padding: 100px 8%; background-color: #030a14; }
+.premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 60px; }
+.premium-card {
+    position: relative; background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.5) 100%);
+    border: 1px solid rgba(255,255,255,0.08); border-radius: 25px; padding: 30px;
+    display: flex; flex-direction: column; align-items: center; box-shadow: 0 15px 35px rgba(0,0,0,0.6); transition: all 0.4s ease;
+}
+.premium-card:hover { transform: translateY(-15px); border-color: #00d2ff; box-shadow: 0 20px 50px rgba(0, 123, 255, 0.3), inset 0 0 20px rgba(0,123,255,0.05); }
+
+.card-image-box { width: 100%; height: 230px; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; position: relative; background: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, transparent 65%); border-radius: 50%; }
+
+@keyframes flotarVolante { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+
+.card-image-box img { height: 160px !important; width: auto !important; object-fit: contain; filter: drop-shadow(0 20px 15px rgba(0,0,0,0.8)); animation: flotarVolante 4s ease-in-out infinite; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.premium-card:hover .card-image-box img { transform: scale(1.3) rotate(5deg); filter: drop-shadow(0 25px 20px rgba(0,0,0,0.9)); animation-play-state: paused; }
+
+.card-info { text-align: center; width: 100%; display: flex; flex-direction: column; flex-grow: 1; }
+.brand-tag { display: inline-block; color: #00d2ff; font-size: 0.8rem; letter-spacing: 3px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+.card-info h4 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 25px; line-height: 1.4; }
+
+@keyframes luzBoton { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
+.btn-super-premium {
+    margin-top: auto; position: relative; display: flex; align-items: center; justify-content: center; gap: 12px;
+    background: linear-gradient(90deg, #11998e 0%, #25D366 100%); color: white !important; text-decoration: none;
+    padding: 15px 20px; border-radius: 12px; font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; overflow: hidden; border: 2px solid transparent;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); transition: all 0.4s ease;
+}
+.btn-super-premium i { font-size: 1.4rem; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.btn-super-premium::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent); transform: skewX(-30deg); animation: luzBoton 3s infinite; }
+.btn-super-premium:hover { transform: scale(1.05) translateY(-5px); background: linear-gradient(90deg, #25D366 0%, #11998e 100%); border: 2px solid rgba(255,255,255,0.7); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6); }
+.btn-super-premium:hover i { transform: scale(1.2) rotate(-10deg); }
+
+/* SECCIÓN PARALLAX 2 */
+.parallax-divider { height: 300px; background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(5, 16, 32, 0.9)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1920&auto=format&fit=crop') center/cover; background-attachment: fixed; display: flex; align-items: center; justify-content: center; text-align: center; }
+.parallax-content h2 { color: white; font-size: 2.5rem; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; }
+
+/* =========================================
+SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
+   ========================================= */
+.infrastructure { display: flex; align-items: center; justify-content: space-between; padding: 100px 8%; background-color: #051020; gap: 60px; }
+
+.infra-content { flex: 0.8; } /* Hacemos el texto un poco más angosto */
+.infra-content h2 { color: white; font-size: 2.8rem; margin-bottom: 25px; text-transform: uppercase; font-weight: 900; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+.infra-content p { color: #aaaaaa; font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
+.infra-content strong { color: #007bff; font-weight: 900; }
+
+.check-list { list-style: none; margin-top: 30px; }
+.check-list li { color: white; font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; font-weight: 700; }
+.check-icon { color: #007bff; font-weight: bold; margin-right: 15px; font-size: 1.2rem; }
+
+.infra-image { flex: 2; display: flex; justify-content: center; } /* EL VIDEO TOMA EL CONTROL DEL ANCHO */
+
+.infra-image video {
+    width: 100%;
+    max-width: 1000px; /* Límite gigante */
+    aspect-ratio: 16 / 9; /* Formato Cine/Horizontal */
+    object-fit: cover; /* Rellena todo sin franjas negras */
+    border-radius: 20px; 
+    border: 4px solid #fff; 
+    outline: 2px solid rgba(0, 123, 255, 0.5); 
+    outline-offset: 4px; 
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.6), 0 0 60px rgba(0, 123, 255, 0.2), 0 15px 40px rgba(0,0,0,0.8); 
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .infrastructure { flex-direction: column; text-align: center; padding: 70px 5%; gap: 50px; }
+    .infra-content { flex: none; width: 100%; }
+    .check-list li { justify-content: center; }
+    .infra-image { flex: none; width: 100%; }
+    .infra-image video { max-width: 100%; }
+}
+
+/* SECCIÓN PROCESO DE TRABAJO */
+.process { padding: 100px 8%; background-color: #08162b; }
+.text-center { text-align: center; }
+.process-steps { display: flex; justify-content: space-between; gap: 25px; margin-top: 60px; flex-wrap: wrap; }
+.step { flex: 1; min-width: 220px; text-align: center; padding: 30px 20px; background: rgba(255, 255, 255, 0.02); border-radius: 15px; border-top: 3px solid #007bff; transition: transform 0.4s ease, background 0.4s, box-shadow 0.4s; }
+.step:hover { transform: translateY(-10px); background: rgba(0, 123, 255, 0.05); box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2); }
+.step-number { width: 60px; height: 60px; background-color: #007bff; color: white; font-size: 1.6rem; font-weight: 900; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); }
+.step h4 { color: white; margin-bottom: 15px; font-size: 1.3rem; }
+.step p { color: #aaaaaa; font-size: 0.95rem; line-height: 1.6; }
+
+/* GALERÍA ANTES Y DESPUÉS */
+.gallery { padding: 100px 8%; background-color: #0b1d3a; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 50px; }
+.gallery-item { background: rgba(255,255,255,0.02); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
+.comparison { display: flex; gap: 10px; margin-bottom: 20px; }
+.before-after { position: relative; flex: 1; }
+.before-after img { width: 100%; border-radius: 8px; filter: grayscale(0.5); }
+.before-after span { position: absolute; bottom: 10px; left: 10px; background: #007bff; color: white; font-size: 0.6rem; padding: 3px 8px; font-weight: 900; border-radius: 4px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+.gallery-item h4 { color: white; margin-bottom: 10px; }
+.gallery-item p { color: #aaa; font-size: 0.9rem; }
+
+/* TESTIMONIOS STYLE GOOGLE */
+.testimonials { padding: 100px 8%; background-color: #051020; }
+.reviews-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 50px; }
+.review-card { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 20px; max-width: 450px; border-left: 5px solid #007bff; transition: all 0.4s ease; }
+.review-card:hover { box-shadow: -10px 0 20px -5px rgba(0, 123, 255, 0.4); transform: translateX(10px); }
+.stars { color: #f1c40f; margin-bottom: 20px; font-size: 1.2rem; }
+.review-card p { color: white; font-style: italic; line-height: 1.6; margin-bottom: 20px; }
+.review-card h5 { color: #007bff; font-weight: 900; text-transform: uppercase; }
+
+/* MAPA */
+.map-section { padding: 80px 8%; background-color: #0b1d3a; }
+.map-info { text-align: center; margin-bottom: 40px; }
+.map-info h2 { color: white; text-transform: uppercase; margin-bottom: 15px; }
+.map-info p { color: #aaa; margin-bottom: 25px; font-size: 1.2rem; }
+.map-container { border-radius: 20px; overflow: hidden; border: 3px solid rgba(0,123,255,0.3); }
+
+/* PREGUNTAS FRECUENTES (ACORDEÓN) */
+.faq-section { padding: 80px 8%; background-color: #051020; }
+.faq-container { max-width: 800px; margin: 40px auto 0; }
+.faq-item { background: rgba(255, 255, 255, 0.03); margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05); overflow: hidden; }
+.faq-question { width: 100%; background: none; border: none; color: white; padding: 20px 25px; text-align: left; font-size: 1.1rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
+.faq-question:hover { background: rgba(0, 123, 255, 0.1); }
+.faq-question i { transition: transform 0.4s ease; color: #007bff; }
+.faq-answer { max-height: 0; transition: max-height 0.4s ease; }
+.faq-answer p { padding: 0 25px 20px; color: #aaaaaa; line-height: 1.6; }
+.faq-item.active .faq-answer { max-height: 200px; }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+
+/* AJUSTE PARA LOS ÍCONOS DE REDES EN EL ENCABEZADO */
+.social-icon { font-size: 1.2rem !important; color: white; margin-left: 15px !important; transition: color 0.3s ease, transform 0.3s ease; }
+.social-icon:hover { color: #007bff; transform: scale(1.2); }
+
+/* ESTILOS DEL FOOTER (PIE DE PÁGINA) */
+.footer { background-color: #020813; padding: 70px 8% 30px; border-top: 2px solid #007bff; }
+.footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+.footer-col { flex: 1; min-width: 250px; }
+.footer-col h3 { color: white; font-size: 1.3rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+.footer-col p { color: #aaaaaa; line-height: 1.8; margin-bottom: 10px; font-size: 0.95rem; }
+.footer-col i { color: #007bff; margin-right: 10px; width: 20px; text-align: center; }
+.footer-col a:hover { color: #007bff !important; transition: 0.3s; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.footer-socials { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; }
+.footer-socials a { color: white; background: rgba(255, 255, 255, 0.05); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; text-decoration: none; transition: all 0.3s ease; }
+.footer-socials a:hover { background-color: #007bff; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5); }
+
+.copyright { margin-top: 30px; font-size: 0.8rem !important; opacity: 0.6; }
+.mt-20 { margin-top: 20px; }
+
+@media (max-width: 768px) { .footer-container { flex-direction: column; text-align: center; } .text-right { text-align: center; } }
+
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 2px 2px 20px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s ease; }
+.whatsapp-float:hover { transform: scale(1.15); }
