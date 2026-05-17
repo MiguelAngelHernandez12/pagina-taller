@@ -122,7 +122,7 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
    ========================================= */
 .infrastructure { display: flex; align-items: center; justify-content: space-between; padding: 100px 8%; background-color: #051020; gap: 60px; }
 
-.infra-content { flex: 0.8; } /* Hacemos el texto un poco más angosto */
+.infra-content { flex: 0.8; }
 .infra-content h2 { color: white; font-size: 2.8rem; margin-bottom: 25px; text-transform: uppercase; font-weight: 900; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
 .infra-content p { color: #aaaaaa; font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
 .infra-content strong { color: #007bff; font-weight: 900; }
@@ -131,13 +131,13 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
 .check-list li { color: white; font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; font-weight: 700; }
 .check-icon { color: #007bff; font-weight: bold; margin-right: 15px; font-size: 1.2rem; }
 
-.infra-image { flex: 2; display: flex; justify-content: center; } /* EL VIDEO TOMA EL CONTROL DEL ANCHO */
+.infra-image { flex: 2; display: flex; justify-content: center; }
 
 .infra-image video {
     width: 100%;
-    max-width: 1000px; /* Límite gigante */
-    aspect-ratio: 16 / 9; /* Formato Cine/Horizontal */
-    object-fit: cover; /* Rellena todo sin franjas negras */
+    max-width: 1000px; 
+    aspect-ratio: 16 / 9; 
+    object-fit: cover; 
     border-radius: 20px; 
     border: 4px solid #fff; 
     outline: 2px solid rgba(0, 123, 255, 0.5); 
@@ -231,8 +231,9 @@ SECCIÓN INFRAESTRUCTURA - VIDEO GIGANTE
 /* BOTÓN WHATSAPP FLOTANTE */
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 2px 2px 20px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s ease; }
 .whatsapp-float:hover { transform: scale(1.15); }
+
 /* =========================================
-nAJUSTES DEFINITIVOS PARA CELULAR
+   AJUSTES DEFINITIVOS PARA CELULAR (ESTILO PC EN LÍNEA)
    ========================================= */
 html, body {
     overflow-x: hidden;
@@ -240,51 +241,56 @@ html, body {
 }
 
 @media (max-width: 768px) {
-    /* Ajustes de textos y video */
+    /* Ajustes de textos y video generales */
     h1 { font-size: 1.8rem !important; }
     h2 { font-size: 1.5rem !important; }
     .infrastructure { flex-direction: column; padding: 50px 5%; text-align: center; }
     .infra-image video { width: 100%; height: auto; }
     
-/* EL ENCABEZADO Y LOS BOTONES (La solución real) */
+    /* EL ENCABEZADO Y LOS BOTONES (Diseño en fila) */
     header {
-        position: relative !important; /* <--- ¡ESTA ES LA MAGIA QUE EMPUJA EL TEXTO HACIA ABAJO! */
+        position: relative !important; /* Empuja el texto hacia abajo */
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; /* Mantiene el logo arriba del menú */
         height: auto !important;
-        padding: 25px 5% !important;
+        padding: 15px 2% !important;
         background-color: rgba(11, 29, 58, 0.98) !important;
     }
 
     nav {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important; /* ¡Acomoda todo en horizontal! */
+        flex-wrap: wrap !important; /* Si la pantalla es muy chiquita, lo acomoda bien sin dañar */
+        justify-content: center !important;
         align-items: center !important;
         width: 100% !important;
-        margin-top: 20px !important;
+        margin-top: 15px !important;
+        gap: 10px !important;
     }
 
-    /* Centramos los enlaces y les quitamos el margen invisible */
+    /* Enlaces de texto achicados para que quepan */
     nav a {
         margin-left: 0 !important;
-        margin-bottom: 20px !important;
-        font-size: 1.2rem !important;
-        display: block !important;
+        margin-bottom: 5px !important;
+        font-size: 0.8rem !important; /* Letra más pequeña para que quepa en fila */
+        display: inline-block !important;
     }
 
-    /* Los íconos de redes (Facebook, TikTok) alineados en fila */
+    /* Los íconos de redes (Facebook, TikTok) */
     .social-icon {
         display: inline-block !important;
-        margin: 0 15px 20px 15px !important;
-        font-size: 1.5rem !important;
+        margin: 0 5px 5px 5px !important;
+        font-size: 1.1rem !important;
     }
 
-    /* El botón de Contacto centrado */
+    /* El botón de Contacto ajustado al tamaño */
     .btn-menu {
-        margin-left: 0 !important;
-        width: 80% !important;
+        margin-left: 5px !important;
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+        width: auto !important;
+        margin-bottom: 5px !important;
         text-align: center !important;
-        margin-bottom: 10px !important;
     }
 
     /* WhatsApp flotante asegurado */
@@ -292,6 +298,6 @@ html, body {
         bottom: 20px !important;
         right: 20px !important;
         z-index: 10000 !important;
-        transform: scale(0.85) !important; /* Un poco más pequeño para no estorbar en el cel */
+        transform: scale(0.85) !important;
     }
 }
