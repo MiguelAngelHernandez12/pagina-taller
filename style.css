@@ -244,7 +244,14 @@ html, body {
     /* Ajustes de textos y video generales */
     h1 { font-size: 1.8rem !important; }
     h2 { font-size: 1.5rem !important; }
-    .infrastructure { flex-direction: column; padding: 50px 5%; text-align: center; }
+    
+    /* MODIFICACIÓN: Reducido padding superior de 50px a 15px para subir el título */
+    .infrastructure { 
+        flex-direction: column; 
+        padding: 15px 5% 50px 5% !important; /* Arriba Izq Abajo Der */
+        text-align: center; 
+    }
+    
     .infra-image video { width: 100%; height: auto; }
     
     /* EL ENCABEZADO Y LOS BOTONES (Diseño en fila) */
